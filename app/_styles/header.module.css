@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Gasoek+One&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Outfit:wght@100;300;400;500;600;700;800;900&family=Pacifico&display=swap");
+
+.header {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  height: 9vh;
+  padding: 0 2rem;
+  border-bottom: 2px solid rgb(210, 210, 210);
+  background-color: rgb(253, 253, 253);
+  overflow-x: auto;
+}
+
+.logo {
+  flex: 1;
+}
+
+.ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+.li {
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  flex: 8;
+}
+
+.btn {
+  background-color: rgb(23, 23, 23);
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: rgb(56, 56, 56);
+}
+
+.icon {
+  display: none;
+  cursor: pointer;
+}
+
+.hide_li {
+  display: none;
+}
+@media (max-width: 1377px) {
+  .nav {
+    flex: 3;
+  }
+}
+@media (max-width: 877px) {
+  .icon {
+    display: block;
+  }
+
+  .bars {
+    font-size: 22px;
+  }
+
+  .nav_btn {
+    display: none;
+  }
+
+  .hide_li {
+    display: block;
+  }
+
+  .nav {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 9vh;
+    left: -130vh;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    transition: all 500ms ease;
+  }
+
+  .nav_active {
+    left: 0;
+  }
+
+  .ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+
+  .close {
+    font-size: 28px;
+  }
+}
